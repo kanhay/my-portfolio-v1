@@ -44,7 +44,7 @@ import postgresql from './postgreSQL-icon.png';
 import linux from './linux.png';
 import django from './django.png';
 import nodeJs from './nodeJs.png';
-import python from './python.png';
+import python from './pyython.png';
 import react from './react.png';
 import javascript from './javascript.png';
 import c from './c.png';
