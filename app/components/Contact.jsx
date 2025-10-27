@@ -68,14 +68,14 @@ const Contact = () => {
                 whileInView={{x: 0, opacity: 1}}
                 transition={{delay:1.1, duration: 0.6}}
                 type="text" placeholder='Enter your name' required name="name"
-                className='flex-1 p-3 outline-none border-[0.5px] border-gray-400
-                rounded-md bg-white'/>
+                className='flex-1 p-3 outline-none border-[0.5px] border-[#FA8072]
+                rounded-md bg-white backdrop-blur-sm'/>
                 <motion.input
                 initial={{x: 50, opacitx: 0}}
                 whileInView={{x: 0, opacity: 1}}
                 transition={{delay:1.2, duration: 0.6}}
                 type="email" placeholder='Enter your email' required name="email"
-                className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 
+                className='flex-1 p-3 outline-none border-[0.5px] border-[#FA8072] 
                 rounded-md bg-white'/>
             </div>
             <motion.textarea 
@@ -83,7 +83,7 @@ const Contact = () => {
             whileInView={{y: 0, opacity: 1}}
             transition={{delay:1.3, duration: 0.6}}
             rows='6' placeholder='Enter your message' required name="message"
-            className='w-full p-4 outline-none border-[0.5px] border-gray-400 
+            className='w-full p-4 outline-none border-[0.5px] border-[#FA8072] 
             rounded-md bg-white mb-6' ></motion.textarea>
             <motion.button 
             whileHover={{scale: 1.05}}
@@ -102,109 +102,3 @@ const Contact = () => {
 
 export default Contact
 
-
-// import React, { useState } from "react";
-
-// function ContactForm() {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     message: ""
-//   });
-//   const [isSubmitting, setIsSubmitting] = useState(false);
-
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-//     setIsSubmitting(true);
-
-//     try {
-//       const response = await fetch("https://api.web3forms.com/submit", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({
-//           access_key: "acfa9842-d19a-4eff-a8c2-93530f8631e0",
-//           ...formData
-//         }),
-//       });
-
-//       const result = await response.json();
-//       if (result.success) {
-//         alert("Message sent successfully!");
-//         setFormData({ name: "", email: "", message: "" });
-//       } else {
-//         alert("Failed to send message. Please try again.");
-//       }
-//     } catch (error) {
-//       alert("An error occurred. Please try again.");
-//     } finally {
-//       setIsSubmitting(false);
-//     }
-//   };
-
-//   const handleChange = (e) => {
-//     setFormData({
-//       ...formData,
-//       [e.target.name]: e.target.value
-//     });
-//   };
-
-//   return (
-//     <div style={{ maxWidth: "500px", margin: "0 auto", padding: "20px" }}>
-//       <h2>Contact Us</h2>
-//       <form onSubmit={handleSubmit}>
-//         <div style={{ marginBottom: "15px" }}>
-//           <label htmlFor="name">Name:</label>
-//           <motion.
-//             type="text"
-//             name="name"
-//             value={formData.name}
-//             onChange={handleChange}
-//             required
-//             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
-//           />
-//         </div>
-
-//         <div style={{ marginBottom: "15px" }}>
-//           <label htmlFor="email">Email:</label>
-//           <input
-//             type="email"
-//             name="email"
-//             value={formData.email}
-//             onChange={handleChange}
-//             required
-//             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
-//           />
-//         </div>
-
-//         <div style={{ marginBottom: "15px" }}>
-//           <label htmlFor="message">Message:</label>
-//           <textarea
-//             name="message"
-//             value={formData.message}
-//             onChange={handleChange}
-//             required
-//             rows="5"
-//             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
-//           />
-//         </div>
-
-//         <button
-//           type="submit"
-//           disabled={isSubmitting}
-//           style={{
-//             background: "#007bff",
-//             color: "white",
-//             padding: "10px 20px",
-//             border: "none",
-//             borderRadius: "4px",
-//             cursor: isSubmitting ? "not-allowed" : "pointer"
-//           }}
-//         >
-//           {isSubmitting ? "Sending..." : "Send Message"}
-//         </button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default ContactForm;

@@ -15,16 +15,16 @@ const Projects = () => {
             transition={{delay:0.9, duration: 0.6}}
             key={key} 
             style={{ backgroundImage: `url(${project.bgImage})`}}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg border border-gray-600
+            className="h-72 bg-no-repeat bg-cover bg-center rounded-lg border border-gray-600
             relative cursor-pointer group">
                 <div className='flex flex-col bg-white/80 backdrop-blur-sm w-10/12 rounded-md absolute bottom-2 
                 left-1/2 -translate-x-1/2 py-2 px-2 text-center items-center
-                 duration-500 group-hover:bottom-5'>
+                 duration-500 group-hover:bottom-5 min-h-40 justify-between'>
                     <h1 className='font-bold'>{project.title}</h1>
                     <p>{project.description}</p>
-                    <button onClick={() => setSelectedProject(project)} className='gap-1 flex items-center mt-2 p-2 text-sm text-gray-600
-                    justify-center transition-transform duration-300 group-hover:scale-115 group-hover:bg-[#FA8072]/40  rounded-lg'>
-                        Read more <Image alt='title' src={assets.right_arrow} className='w-4' />
+                    <button onClick={() => setSelectedProject(project)} className='gap-1 flex items-center text-gray-600
+                    justify-center transition-transform duration-300 group-hover:scale-103 group-hover:text-[#FA8072] rounded-lg'>
+                        Read more 🠖
                     </button>
                 </div>
             </motion.div>
@@ -35,7 +35,7 @@ const Projects = () => {
     initial={{opacity: 0}}
     whileInView={{opacity: 1}}
     transition={{duration: 1}}
-    id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
+    id='work' className='w-full px-[12%] py-10 scroll-mt-20 mb-8'>
         
         <motion.h4
         initial={{y: -20, opacity: 0}}
@@ -47,7 +47,7 @@ const Projects = () => {
         initial={{y: -20, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{delay:0.5, duration: 0.5}}
-        className='text-center text-5xl'>Ly latest work</motion.h2>
+        className='text-center text-5xl'>My work</motion.h2>
         
         <motion.p 
         initial={{opacity: 0}}
@@ -61,7 +61,7 @@ const Projects = () => {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{delay:0.9, duration: 0.6}}
-        className='grid grid-cols-[repeat(auto-fit,minmax(265px,1fr))]  my-8 gap-8'>
+        className='grid md:grid-cols-3 gap-8'>
             {displayWork()}
         </motion.div>
 
@@ -126,7 +126,8 @@ const Projects = () => {
                     transition={{duration: 0.9, delay: 1.2}}
                     href={selectedProject.url}
                     target="_blank"
-                    className="inline-block mt-4 px-3 py-2 rounded-lg text-[#F94625] text-base bg-[#F94625]/15 hover:bg-black hover:text-white"
+                    className="inline-block mt-4 px-3 py-2 rounded-lg 
+                    text-[#F94625] text-base bg-[#F94625]/15 hover:bg-black hover:text-white"
                     >
                     View on GitHub ↗
                     </motion.a>

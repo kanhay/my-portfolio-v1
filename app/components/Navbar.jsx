@@ -42,9 +42,6 @@ const Navbar = () => {
                 <li>
                     <a href='#about' className='hover:text-[#F94625]' >About me</a>
                 </li>
-                {/* <li>
-                    <a href='#services' className='hover:text-[#F94625]' >Services</a>
-                </li> */}
                 <li>
                     <a href='#work' className='hover:text-[#F94625]' >My work</a>
                 </li>
@@ -53,9 +50,6 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className='flex'>
-                {/* <button>
-                    <Image src={assets.moon_icon} alt='' className='w-6 cursor-pointer' />
-                </button> */}
                 <a href='#contact' className='hidden lg:flex items-center gap-3 px-6 py-2 border border-gray-500 hover:border-2 hover:border-[#F94625] rounded-full ml-4 '>Contact<Image alt='' src={assets.arrow_icon} className="w-3"/></a>
                 <button className='block md:hidden ml-3 ' onClick={handleOpenMenu}>
                     <Image src={assets.menu_black} alt='' className='w-6 cursor-pointer' />
@@ -75,9 +69,6 @@ const Navbar = () => {
                     <li>
                         <a href='#about'  onClick={handleCloseMenu}>About me</a>
                     </li>
-                    {/* <li>
-                        <a href='#services' onClick={handleCloseMenu} >Services</a>
-                    </li> */}
                     <li>
                         <a href='#work' onClick={handleCloseMenu} >My work</a>
                     </li>

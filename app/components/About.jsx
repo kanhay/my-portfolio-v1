@@ -1,13 +1,12 @@
 'use client'
 import Image from 'next/image'
 import { motion } from 'motion/react'
-import { assets } from '@/assets/assets'
 import { infoList, toolsData } from '@/assets/assets'
 
 
 const About = () => {
     const displayInfoList = () => {
-        return infoList.map(({icon, iconDark, title, description}, k) => 
+        return infoList.map(({icon, title, description}, k) => 
         (<motion.li
         whileHover={{scale: 1.05}}
         key={k} className='border-[0.5px] border-gray-400
