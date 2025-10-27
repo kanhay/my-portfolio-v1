@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import { projectsData, assets } from '@/assets/assets'
-import Image from 'next/image'
 import { motion } from 'motion/react'
 import { RxCross2 } from "react-icons/rx";
 
@@ -54,7 +53,7 @@ const Projects = () => {
         whileInView={{opacity: 1}}
         transition={{delay:0.7, duration: 0.5}}
         className='text-center max-w-2xl mx-auto mt-5 mb-12'
-        >Expore a collection of projects crafted during my journey at 1337, highlighting 
+        >Explore a collection of projects crafted during my journey at 1337, highlighting 
         my skills in front-end development, clean design, and creative problem-solving.</motion.p>
 
         <motion.div
